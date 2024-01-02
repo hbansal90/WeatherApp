@@ -100,7 +100,7 @@ button:hover{
     transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 }
-.weatherStatus, .humidBox, .windBox{
+.weatherStatus, .humidBox, .windBox, .tempBox{
     flex: auto;
     display: flex;
     align-items: center;
