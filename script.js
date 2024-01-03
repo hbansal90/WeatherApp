@@ -47,3 +47,7 @@ let weather ={
     }
 
 }
+document.querySelector('#homeButton').addEventListener('click', function(){
+    document.querySelector(".weather").classList.add('loading');
+    document.querySelector("#cityName").value="";
+})

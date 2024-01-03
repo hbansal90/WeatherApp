@@ -2,6 +2,7 @@
 #dark-mode-pic{
     width: 2rem;
     height: 2rem;
+    padding: 0.01em;
 }
 body{
     display: flex;    
@@ -48,12 +49,13 @@ nav{
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    background: #000000d0;
+    background: #000000a9;
     color: white;
     border-radius: 20px;
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     margin: 1em;
+    box-sizing: border-box;
 }
 .search-box{
     padding-left: 2rem;
@@ -92,7 +94,7 @@ nav{
     border: none;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    padding: 0.3rem 0.3rem 0.4rem 0.5rem;
+    padding: 0.5rem 0.4rem 0.4rem 0.6rem;
     border-radius: 30px;
 }
 button:hover{
@@ -119,10 +121,10 @@ h2.temp{
     max-height: 40px;
     position: relative;
 }
-.weather.loading:after{
+.weather.loading::before{
     visibility: visible;
     margin: 20px;
-    content: "Loading...";
+    content: "Waiting...";
     color: white;
     position: absolute;
     top: 0;
@@ -134,4 +136,71 @@ h2.temp{
     display: flex;
     justify-content: center;
     align-items: center;
+}    
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a.linkToMe:hover{
+    text-decoration: none;
+    color: wheat;
+    transition: 0.3s ease-in-out; 
+
+}
+#homeButton{
+    background-color: #000000a9;
+    border: 0;
+    color: whitesmoke;
+    border-radius: 20px;
+    padding: 0.3em 0.7em 0.3em 0.7em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    
+}
+#homeButton:hover{
+    background-color: #aea1a180;
+    color: wheat;
+}
+#dark-mode{
+    cursor: pointer;
+    border-radius: 100%;
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    transition:  background-color 0.5s ease-in-out;
+
+}
+#dark-mode:hover{
+    background-color: #aea1a180;
+    animation: rotateAnimation 0.5s linear forwards;
+}
+#dark-mode:not(hover){
+    animation:  rotateBackAnimation 0.5s linear forwards;
+
+}
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+@keyframes rotateBackAnimation{
+    from{
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+.aboutMe{
+    padding: 0.5rem;
+    border-radius: 30px;;
+
+}
+
+.aboutMe:hover{
+    transition: 0.3s ease-in-out; 
+    background-color: #aea1a180;
 }
